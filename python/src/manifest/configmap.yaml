@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: auth-config
+  name: auth-configmap
 data:
   PSQL_HOST: localhost
   PSQL_DB: auth
