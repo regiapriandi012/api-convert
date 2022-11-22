@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+data:
+  PSQL_HOST: localhost
+  PSQL_DB: auth
+  PSQL_USERNAME: regiapriandi
