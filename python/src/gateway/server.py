@@ -6,7 +6,7 @@ from auth_svc import access
 from storage import util
 
 server = Flask(__name__)
-server.config['MONGO_URI'] = "mongodb://localhost:27017/videos"
+server.config['MONGO_URI'] = "mongodb://127.0.0.1:27017/videos"
 
 mongo = PyMongo(server)
 
