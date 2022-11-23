@@ -5,8 +5,9 @@ metadata:
 spec:
   selector:
     app: auth
-  type: ClusterIP
+  type: NodePort
   ports:
     - port: 5000
       targetPort: 5000
+      nodePort: 30001
       protocol: TCP

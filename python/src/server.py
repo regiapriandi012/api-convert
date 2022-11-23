@@ -6,9 +6,10 @@ server = Flask(__name__)
 
 def get_db_connection():
     conn = psycopg2.connect(host=os.environ['PSQL_HOST'],
-                            database=os.environ['PQSL_DB'],
+                            database=os.environ['PSQL_DB'],
                             user=os.environ['PSQL_USERNAME'],
-                            password=os.environ['PQSL_PASSWORD'])
+                            password=os.environ['PSQL_PASSWORD'],
+                            port=5432)
     return conn
 
 
