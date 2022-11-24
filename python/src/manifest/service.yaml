@@ -11,3 +11,6 @@ spec:
       targetPort: 5000
       nodePort: 30001
       protocol: TCP
+  selector:
+    app: auth-app
+

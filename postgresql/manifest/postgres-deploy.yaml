@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: postgres-deploy
   labels:
-    name: postgres
-    app: auth
+    name: postgres-deploy
+    app: auth-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: postgres
-      app: auth
+      name: postgres-pod
+      app: auth-app
   template:
     metadata:
-      name: postgres
+      name: postgres-pod
       labels:
-        name: postgres
-        app: auth
+        name: postgres-pod
+        app: auth-app
     spec:
       containers:
       - name: postgres
@@ -25,9 +25,11 @@ spec:
         - containerPort: 5432
         env:
           - name: POSTGRES_USER
-            value: "postgres"
+            value: "regiapriandi"
           - name: POSTGRES_PASSWORD
-            value: "postgres"
+            value: "sinheul24"
+          - name: POSTGRES_DB
+            value: "authdb"
           - name: POSTGRES_HOST_AUTH_METHOD
             value: trust
 

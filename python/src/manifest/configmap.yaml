@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: auth-configmap
 data:
-  PSQL_HOST: auth-db
-  PSQL_DB: auth
-  PSQL_USERNAME: regiapriandi
+  DATABASE_HOST: db
+  DATABASE_NAME: authdb
+  DATABASE_USER: regiapriandi
