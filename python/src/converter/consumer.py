@@ -4,7 +4,7 @@ import gridfs
 from convert import to_mp3
 
 def main():
-    client = MongoClient("127.0.0.1", 27017)
+    client = MongoClient("mongodb+srv://regiapriandi012:sinheul24@cluster0.jrd6j.mongodb.net/?retryWrites=true&w=majority")
     db_videos = client.videos
     db_mp3s = client.mp3s
     # gridfs

@@ -1,12 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-app
+  name: auth
+  labels:
+    app: auth
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: auth-app
+      app: auth
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -14,10 +16,10 @@ spec:
   template:
     metadata:
       labels:
-        app: auth-app
+        app: auth
     spec:
       containers:
-        - name: auth-app
+        - name: auth
           image: regiapriandi012/auth
           ports:
             - containerPort: 5000
