@@ -5,7 +5,7 @@ metadata:
   labels:
     app: notification
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: notification
