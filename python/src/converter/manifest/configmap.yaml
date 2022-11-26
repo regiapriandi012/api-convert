@@ -5,3 +5,4 @@ metadata:
 data:
   MP3_QUEUE: "mp3"
   VIDEO_QUEUE: "video"
+  MONGODB_URI: "mongodb://regiapriandi:sinheul24@mongodb:27017/?authSource=admin&readPreference=secondary&directConnection=true&ssl=false"
