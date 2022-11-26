@@ -60,7 +60,6 @@
 - #### File DB (Mongodb) -> IP:30005
 ##
 ### Add Auth User
-Execute the Query on the pgAdmin
 ```
 --Create Database User
 CREATE TABLE user (
