@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: notification
-          image: sweasytech/notification
+          image: regiapriandi012/notification
           envFrom:
             - configMapRef:
                 name: notification-configmap
