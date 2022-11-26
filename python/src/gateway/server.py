@@ -8,9 +8,9 @@ from bson.objectid import ObjectId
 
 server = Flask(__name__)
 
-mongo_video = PyMongo(server, uri="mongodb+srv://regiapriandi012:sinheul24@cluster0.jrd6j.mongodb.net/videos?retryWrites=true&w=majority")
+mongo_video = PyMongo(server, uri="mongodb://regiapriandi:sinheul24@mongodb:27017/videos?authSource=admin&readPreference=secondary&directConnection=true&ssl=false")
 
-mongo_mp3 = PyMongo(server, uri="mongodb+srv://regiapriandi012:sinheul24@cluster0.jrd6j.mongodb.net/mp3s?retryWrites=true&w=majority")
+mongo_mp3 = PyMongo(server, uri="mongodb://regiapriandi:sinheul24@mongodb:27017/mp3s?authSource=admin&readPreference=secondary&directConnection=true&ssl=false")
 
 fs_videos = gridfs.GridFS(mongo_video.db)
 fs_mp3s = gridfs.GridFS(mongo_mp3.db)
