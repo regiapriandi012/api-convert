@@ -69,4 +69,3 @@ CREATE TABLE user (
 INSERT INTO user (email, password) VALUES ('you@gmail.com', '123456');
 ```
 ##
-## ! This API microservice was build from freeCodeCamp youtube (https://www.youtube.com/watch?v=hmkF77F9TLw&t=12731s)
