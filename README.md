@@ -13,9 +13,6 @@
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ## 
-### Requirements Tools
-![image](https://user-images.githubusercontent.com/69528812/204097332-35e5e301-a7f5-45b9-ae13-2290cc0356fb.png)
-## 
 ### Configure Kubernetes
 - #### Configure Auth DB
   ```
