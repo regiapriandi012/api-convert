@@ -27,3 +27,37 @@
   $ cd python-microservice-kubernetes
   $ kubectl apply -f mongodb/manifest/
   ```
+- #### Configure Rabbitmq Queue
+  ```
+  $ cd python-microservice-kubernetes
+  $ kubectl apply -f rabbit/manifest/
+  ```
+- #### Configure Auth App
+  ```
+  $ cd python-microservice-kubernetes
+  $ kubectl apply -f python/src/auth/manifest/
+  ```
+- #### Configure Gateway App
+  ```
+  $ cd python-microservice-kubernetes
+  $ kubectl apply -f python/src/gateway/manifest/
+  ```
+- #### Configure Converter App
+  ```
+  $ cd python-microservice-kubernetes
+  $ kubectl apply -f python/src/converter/manifest/
+  ```
+- #### Configure Notification App
+  ```
+  $ cd python-microservice-kubernetes
+  $ kubectl apply -f python/src/notification/manifest/
+  ```
+##
+### Access The Service
+- #### Gateway (App) > IP:30002
+- #### Auth DB (Postgresql) -> IP:30003
+- #### Rabbitmq Manager (Queue) -> IP:30004
+- #### File DB (Mongodb) -> IP:30005
+##
+### Add Auth User
+Execute the Query on the pgAdmin
