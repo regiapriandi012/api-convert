@@ -55,8 +55,6 @@ jobs:
       run: |-
         kubectl apply -k .
         kubectl rollout status deployment/$DEPLOYMENT_AUTHDB_APP
-        kubectl rollout status statefulset/$DEPLOYMENT_FILEDB_APP
-        kubectl rollout status statefulset/$DEPLOYMENT_RABBITMQ_APP
         kubectl rollout status deployment/$DEPLOYMENT_AUTH_APP
         kubectl rollout status deployment/$DEPLOYMENT_GATEWAY_APP
         kubectl rollout status deployment/$DEPLOYMENT_CONVERTER_APP
