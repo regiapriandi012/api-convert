@@ -1,6 +1,13 @@
 ![](https://github.com/regiapriandi012/python-microservice-kubernetes/actions/workflows/google.yml/badge.svg)
 # Python Microservice Kubernetes - Example
 Microservice architecture design built using Python, Rabbitmq, Postgresql, Mongodb to build a video to Mp3 conversion API.
+## 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69528812/204144014-3dabf965-d8eb-4858-8af7-8ff3a2ac3879.gif" alt="animated" />
+</p>
+
+##
 ## API Convert Video to MP3
 ![image](https://user-images.githubusercontent.com/69528812/204139934-d6c3c42a-beb3-4058-924d-f1c24e864a6b.png)
 ## 
