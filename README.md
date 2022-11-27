@@ -81,9 +81,8 @@ INSERT INTO user (email, password) VALUES ('you@gmail.com', '123456');
 ### Testing
   - #### Login
     ```
-    $ curl -X POST 192.168.56.2:30002/login -u regiapriandi012@gmail.com:123456
-    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlZ2lhcHJpYW5kaTAxMkBnbWFpbC5jb20iLCJleHAiOjE2Njk2MTUxMjEsI
-    mlhdCI6MTY2OTUyODcyMSwiYWRtaW4iOnRydWV9.YpNpfTBJLI7u3v6lwDZphGPBnjc83t7m9DkUnTXifpU
+    $ curl -X POST 192.168.56.2:30002/login -u regiapriandi012@gmail.com:12345
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlZ2lhcHJpYW5kaTAxMkBnbWFpbC5jb20iLCJleHAiOjE2Njk2MTUxMjEsImlhdCI6MTY2OTUyODcyMSwiYWRtaW4iOnRydWV9.YpNpfTBJLI7u3v6lwDZphGPBnjc83t7m9DkUnTXifpU
     ```
   - #### Upload Video
     ```
