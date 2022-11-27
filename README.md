@@ -69,3 +69,34 @@ CREATE TABLE user (
 INSERT INTO user (email, password) VALUES ('you@gmail.com', '123456');
 ```
 ##
+### Configure Queue on Rabbitmq
+  - #### Access manager on IP:30004
+    ```
+    Username: guest (default)
+    Password: guest (default)
+    ```
+  - #### Add Queues
+    <img width="960" alt="image" src="https://user-images.githubusercontent.com/69528812/204124113-060ba3ec-4aac-443b-b4b3-75359ce520dd.png">
+##
+### Testing
+  - #### Login
+    ```
+    $ curl -X POST 192.168.56.2:30002/login -u regiapriandi012@gmail.com:123456
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlZ2lhcHJpYW5kaTAxMkBnbWFpbC5jb20iLCJleHAiOjE2Njk2MTUxMjEsI
+    mlhdCI6MTY2OTUyODcyMSwiYWRtaW4iOnRydWV9.YpNpfTBJLI7u3v6lwDZphGPBnjc83t7m9DkUnTXifpU
+    ```
+  - #### Upload Video
+    ```
+    $ curl -X POST -F 'file=@./video.mp4' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlZ2lhcHJpYW5kaTAxMkBnbWFpbC5jb20iLCJleHAiOjE2Njk2MTUxMTIsImlhdCI6MTY2OTUyODcxMiwiYWRtaW4iOnRydWV9.TgMr3Uwk5pnZNrCMWYZfsdkBrTfx2IMnYbET_iwJu-g' 192.168.56.2:30002/upload
+    ```
+  - #### Get Mp3 file ID
+    <img width="288" alt="image" src="https://user-images.githubusercontent.com/69528812/204123781-d51f5cbf-6f9a-4de0-bafb-dc5367be754e.png">
+  - #### Download Mp3
+    ```
+    curl --output video.mp3 -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlZ2lhcHJpYW5kaTAxMkBnbWFpbC5jb20iLCJleHAiOjE2Njk2MTUxMTIsImlhdCI6MTY2OTUyODcxMiwiYWRtaW4iOnRydWV9.TgMr3Uwk5pnZNrCMWYZfsdkBrTfx2IMnYbET_iwJu-g' "192.168.56.2:30002/download?fid=63830df2667a14a04a9d99b9"
+    ```
+  - #### Show Mp3 downloaded
+    ```
+    $ ls | grep .mp3
+    video.mp3
+    ```
