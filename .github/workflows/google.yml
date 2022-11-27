@@ -58,7 +58,7 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
-        kubectl apply -k .
+        kubectl apply -k -
         kubectl rollout status deployment/$DEPLOYMENT_AUTHDB_APP
         kubectl rollout status statefulset/$DEPLOYMENT_FILEDB_APP
         kubectl rollout status statefulset/$DEPLOYMENT_RABBITMQ_APP
