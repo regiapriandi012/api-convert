@@ -1,0 +1,36 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - postgresql/manifest/postgres-deploy.yaml 
+  - postgresql/manifest/postgres-service.yaml
+  - mongodb/manifest/configmap.yaml
+  - mongodb/manifest/pv.yaml
+  - mongodb/manifest/pvc.yaml
+  - mongodb/manifest/secret.yaml
+  - mongodb/manifest/service.yaml
+  - mongodb/manifest/statefulset.yaml
+  - mongodb/manifest/storageclass.yaml
+  - rabbit/manifest/configmap.yaml
+  - rabbit/manifest/ingress.yaml
+  - rabbit/manifest/pv.yaml
+  - rabbit/manifest/pvc.yaml
+  - rabbit/manifest/secret.yaml
+  - rabbit/manifest/service.yaml
+  - rabbit/manifest/statefulset.yaml
+  - rabbit/manifest/storageclasses.yaml
+  - python/src/auth/manifest/auth-deploy.yaml
+  - python/src/auth/manifest/configmap.yaml
+  - python/src/auth/manifest/secret.yaml
+  - python/src/auth/manifest/service.yaml
+  - python/src/gateway/manifest/configmap.yaml
+  - python/src/gateway/manifest/gateway-deploy.yaml
+  - python/src/gateway/manifest/secret.yaml
+  - python/src/gateway/manifest/service.yaml
+  - python/src/converter/manifest/configmap.yaml
+  - python/src/converter/manifest/converter-deploy.yaml
+  - python/src/converter/manifest/secret.yaml
+  - python/src/notification/manifest/configmap.yaml
+  - python/src/notification/manifest/notification-deploy.yaml
+  - python/src/notification/manifest/secret.yaml
+  
