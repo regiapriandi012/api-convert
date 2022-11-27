@@ -62,6 +62,16 @@ jobs:
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           python/src/gateway/
+        docker build \
+          --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
+          --build-arg GITHUB_SHA="$GITHUB_SHA" \
+          --build-arg GITHUB_REF="$GITHUB_REF" \
+          python/src/converter/
+        docker build \
+          --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
+          --build-arg GITHUB_SHA="$GITHUB_SHA" \
+          --build-arg GITHUB_REF="$GITHUB_REF" \
+          python/src/notification/
 
     # Push the Docker image to Google Container Registry
     - name: Publish
@@ -78,6 +88,8 @@ jobs:
     - name: Deploy
       run: |-
         ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
-        ./kustomize build . | kubectl apply -f -
+        ./kustomize build . | kubectl apply -f postgresql/manifest/ | kubectl apply -f mongodb/manifest/ | \
+        kubectl apply -f rabbit/manifest/ | kubectl apply -f python/src/auth/manifest/ | kubectl apply -f python/src/gateway/manifest/ | \
+        kubectl apply -f python/src/converter/manifest/ | kubectl apply -f python/src/notification/manifest/
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
