@@ -54,9 +54,4 @@ jobs:
     - name: Deploy
       run: |-
         kubectl apply -k .
-        kubectl rollout status deployment/$DEPLOYMENT_AUTHDB_APP
-        kubectl rollout status deployment/$DEPLOYMENT_AUTH_APP
-        kubectl rollout status deployment/$DEPLOYMENT_GATEWAY_APP
-        kubectl rollout status deployment/$DEPLOYMENT_CONVERTER_APP
-        kubectl rollout status deployment/$DEPLOYMENT_NOTIFICATION_APP
         kubectl get services -o wide
