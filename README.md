@@ -9,7 +9,7 @@ Microservice architecture design built using Python, Rabbitmq, Postgresql, Mongo
 
 ##
 ## API Convert Video to MP3
-![image](https://user-images.githubusercontent.com/69528812/204139934-d6c3c42a-beb3-4058-924d-f1c24e864a6b.png)
+![image](https://user-images.githubusercontent.com/69528812/204431346-7b5834ef-5b60-4ff7-b31d-68241fec00e5.png)
 ## 
 
 ### Used Technology
