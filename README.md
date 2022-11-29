@@ -1,4 +1,3 @@
-![](https://github.com/regiapriandi012/python-microservices-kubernetes/actions/workflows/google.yml/badge.svg)
 # Python Microservices Kubernetes - System Design
 Microservices architecture design built using Python, Rabbitmq, Postgresql, Mongodb to build a video to Mp3 conversion API.
 ## 
