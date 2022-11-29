@@ -1,6 +1,6 @@
-![](https://github.com/regiapriandi012/python-microservice-kubernetes/actions/workflows/google.yml/badge.svg)
-# Python Microservice Kubernetes - System Design
-Microservice architecture design built using Python, Rabbitmq, Postgresql, Mongodb to build a video to Mp3 conversion API.
+![](https://github.com/regiapriandi012/python-microservices-kubernetes/actions/workflows/google.yml/badge.svg)
+# Python Microservices Kubernetes - System Design
+Microservices architecture design built using Python, Rabbitmq, Postgresql, Mongodb to build a video to Mp3 conversion API.
 ## 
 
 <p align="center">
@@ -25,37 +25,37 @@ Microservice architecture design built using Python, Rabbitmq, Postgresql, Mongo
 ### Configure Kubernetes
 - #### Configure Auth DB
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f postgresql/manifest/
   ```
 - #### Configure File DB
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f mongodb/manifest/
   ```
 - #### Configure Rabbitmq Queue
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f rabbit/manifest/
   ```
 - #### Configure Auth App
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f python/src/auth/manifest/
   ```
 - #### Configure Gateway App
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f python/src/gateway/manifest/
   ```
 - #### Configure Converter App
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f python/src/converter/manifest/
   ```
 - #### Configure Notification App
   ```
-  $ cd python-microservice-kubernetes
+  $ cd python-microservices-kubernetes
   $ kubectl apply -f python/src/notification/manifest/
   ```
 ##
