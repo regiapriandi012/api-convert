@@ -1,5 +1,5 @@
 ![](https://github.com/regiapriandi012/python-microservice-kubernetes/actions/workflows/google.yml/badge.svg)
-# Python Microservice Kubernetes - Example
+# Python Microservice Kubernetes - System Design
 Microservice architecture design built using Python, Rabbitmq, Postgresql, Mongodb to build a video to Mp3 conversion API.
 ## 
 
